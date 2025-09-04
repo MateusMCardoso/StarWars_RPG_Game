@@ -1,15 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        DarthWinter darthWinter = new DarthWinter.DarthWinterBuilder("Darth Winter")
+                .lifeScore(2500)
+                .attack(100)
+                .defense(50)
+                .atkFrozenBlade(350)
+                .atkZeroForce(450)
+                .build();
+
+        Stormtrooper stormtrooper = new Stormtrooper.StormtrooperBuilder("Stormtrooper")
+                .attack(75)
+                .defense(0)
+                .atkBlasterShoot(100)
+                .build();
+
+        Jedi jedi = new Jedi.JediBuilder("Luke Skywalker")
+                .lifeScore(500)
+                .attack(75)
+                .defense(50)
+                .atkForceImplosion(250)
+                .atkThePowerOfTheVoid(450)
+                .credits(100)
+                .build();
     }
 }
